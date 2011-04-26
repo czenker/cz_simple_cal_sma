@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'cz_simple_cal_sma'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_czsimplecal_domain_model_event.tx_czsimplecalsma_twitter_hashtags">Twitter Hashtags</label>
+			<label index="tx_czsimplecal_domain_model_event.tx_czsimplecalsma_flickr_tags">Flickr Tags</label>
+			
+			<label index="tx_czsimplecal_domain_model_event.tab_socialmedia">Social Media</label>
+		</languageKey>
+		
+		<languageKey index="de" type="array">
+			<label index="tx_czsimplecal_domain_model_event.tx_czsimplecalsma_twitter_hashtags">Twitter Hashtags</label>
+			<label index="tx_czsimplecal_domain_model_event.tx_czsimplecalsma_flickr_tags">Flickr Tags</label>
+			
+			<label index="tx_czsimplecal_domain_model_event.tab_socialmedia">Social Media</label>
+		</languageKey>
+	</data>
+</T3locallang>

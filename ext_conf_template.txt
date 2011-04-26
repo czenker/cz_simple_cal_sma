@@ -1,0 +1,5 @@
+# cat=basic/twitter/a; type=boolean; label=Enable Twitter Hashtags:allows to define twitter hashtags for each event.
+enableTwitterHashtags = 1
+
+# cat=basic/flickr/a; type=boolean; label=Enable Flickr Categories:allows to set categories used for a Flickr image search.
+enableFlickrTags = 1

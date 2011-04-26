@@ -1,0 +1,9 @@
+config.tx_extbase.objects {
+    Tx_CzSimpleCal_Domain_Repository_EventRepository {
+        className = Tx_CzSimpleCalSma_Domain_Repository_EventRepository
+    }
+    
+    Tx_CzSimpleCal_Domain_Model_Event {
+        className = Tx_CzSimpleCalSma_Domain_Model_Event
+    }
+}

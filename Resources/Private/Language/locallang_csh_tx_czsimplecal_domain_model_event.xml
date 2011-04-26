@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Ontext Sensitive Help (CSH) for table tx_czsimplecal_domain_model_event</description>
+        <type>CSH</type>
+        <csh_table>tx_czsimplecal_domain_model_event</csh_table>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+			<label index="tx_czsimplecalsma_twitter_hashtags.description">comma seperated values</label>
+			<label index="tx_czsimplecalsma_flickr_tags.description">comma seperated values</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="tx_czsimplecalsma_twitter_hashtags.description">Tags durch Kommas getrennt</label>
+			<label index="tx_czsimplecalsma_flickr_tags.description">Tags durch Kommas getrennt</label>
+		</languageKey>
+    </data>
+</T3locallang>
