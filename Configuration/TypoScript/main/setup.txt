@@ -1,0 +1,27 @@
+config.tx_extbase {
+	objects {
+	    Tx_CzSimpleCal_Domain_Repository_EventRepository {
+	        className = Tx_CzSimpleCalSma_Domain_Repository_EventRepository
+	    }
+	    Tx_CzSimpleCal_Domain_Model_Event {
+	        className = Tx_CzSimpleCalSma_Domain_Model_Event
+	    }
+	    
+	    
+	    Tx_CzSimpleCal_Domain_Repository_EventIndexRepository {
+	        className = Tx_CzSimpleCalSma_Domain_Repository_EventIndexRepository
+	    }
+	    Tx_CzSimpleCal_Domain_Model_EventIndex {
+	        className = Tx_CzSimpleCalSma_Domain_Model_EventIndex
+	    }
+	}
+	persistence.classes {
+	    Tx_CzSimpleCalSma_Domain_Model_Event {
+	        mapping.tableName = tx_czsimplecal_domain_model_event
+	    }
+	    
+	    Tx_CzSimpleCalSma_Domain_Model_EventIndex {
+	        mapping.tableName = tx_czsimplecal_domain_model_eventindex
+	    }
+	}
+}
