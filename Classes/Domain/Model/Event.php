@@ -36,19 +36,98 @@ class Tx_CzSimpleCalSma_Domain_Model_Event extends Tx_CzSimpleCal_Domain_Model_E
 	/**
 	 * @var string
 	 */
-	protected $tx_czsimplecalsma_twitter_hashtags = null;
+	protected $txCzsimplecalsmaTwitterHashtags = null;
+	
+	/**
+	 * a cached array of twitter hashtags
+	 * @var array
+	 */
+	protected $txCzsimplecalsmaTwitterHashtags_ = null;
 	
 	/**
 	 * @var string
 	 */
-	protected $tx_czsimplecalsma_flickr_tags = null;
+	protected $txCzsimplecalsmaFlickrTags = null;
 	
+	/**
+	 * a cached array of twitter hashtags
+	 * @var array
+	 */
+	protected $txCzsimplecalsmaFlickrTags_ = null;
+	
+	/**
+	 * get an array of twitter hashtags used for this event
+	 * 
+	 * @return array
+	 */
 	public function getTwitterHashtags() {
-		return 'hashtags';
+		if(is_null($this->txCzsimplecalsmaTwitterHashtags_)) {
+			$this->buildTxCzSimpleCalSmaFlickrTags();
+		}
+		var_dump($this->txCzsimplecalsmaTwitterHashtags);
+		return $this->txCzsimplecalsmaTwitterHashtags_;
 	}
 	
+	/**
+	 * get the first (and therefore "main") twitter hashtag
+	 * 
+	 * @return string|false
+	 */
+	public function getTwitterHashtag() {
+		if(is_null($this->txCzsimplecalsmaTwitterHashtags_)) {
+			$this->buildTxCzSimpleCalSmaFlickrTags();
+		}
+		
+		return reset($this->txCzsimplecalsmaTwitterHashtags_);
+	}
+	
+	/**
+	 * build the array of flickr tags
+	 * @return null
+	 */
+	protected function buildTxCzSimpleCalSmaFlickrTags() {
+		$this->txCzsimplecalsmaTwitterHashtags_ = t3lib_div::trimExplode(',', $this->txCzsimplecalsmaTwitterHashtags, true);
+		
+		// make sure each tag starts with a hash ("#")
+		foreach($this->txCzsimplecalsmaTwitterHashtags_ as &$hashtag) {
+			if(strncmp($hashtag, '#', 1) !== 0) {
+				$hashtag = '#'.$hashtag;
+			}
+		}
+	}
+	
+	/**
+	 * get an array of flickr
+	 * 
+	 * @return array
+	 */
 	public function getFlickrTags() {
-		return 'flickrtags';
+		if(is_null($this->txCzsimplecalsmaFlickrTags_)) {
+			$this->buildTxCzSimpleCalSmaTwitterHashtags();
+		}
+		return $this->txCzsimplecalsmaFlickrTags_;
+	}
+	
+	/**
+	 * get the first (an therefore "main") flickr tag
+	 * 
+	 * @return string|false
+	 */
+	public function getFlickrTag() {
+		if(is_null($this->txCzsimplecalsmaFlickrTags_)) {
+			$this->buildTxCzSimpleCalSmaTwitterHashtags();
+		}
+		
+		return reset($this->txCzsimplecalsmaFlickrTags_);
+	}
+	
+	/**
+	 * build the array of twitter hashtags
+	 * 
+	 * @return null
+	 */
+	protected function buildTxCzSimpleCalSmaTwitterHashtags() {
+		$this->txCzsimplecalsmaFlickrTags_ = t3lib_div::trimExplode(',', $this->txCzsimplecalsmaFlickrTags, true);
 	}
 	
 	
