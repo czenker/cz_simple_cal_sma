@@ -32,16 +32,11 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '0.0.0',
 	'constraints' => array(
 		'depends' => array(
-			'cms' => '',
-			'extbase' => '',
-			'fluid' => '',
 			'cz_simple_cal' => '',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
-			'scheduler' => '',
-			'tt_address' => ''
 		),
 	),
 );
